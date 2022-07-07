@@ -9,7 +9,7 @@ interface HeaderProps {
 }
 
 export function Header({ tasksCounter }: HeaderProps) {
-  const message = tasksCounter === 0 ? "Você não tem" : "Você tem";
+  // const message = tasksCounter === 0 ? "Você não tem" : "Você tem";
   const tasksCounterText = tasksCounter === 1 ? "tarefa" : "tarefas";
 
   return (
@@ -17,7 +17,7 @@ export function Header({ tasksCounter }: HeaderProps) {
       <Image source={logoImg} />
 
       <View style={styles.tasks}>
-        <Text style={styles.tasksCounter}>{message} </Text>
+        <Text style={styles.tasksCounter}>Você tem </Text>
         <Text style={styles.tasksCounterBold}>
           {tasksCounter !== 0 ? tasksCounter : null} {tasksCounterText}
         </Text>

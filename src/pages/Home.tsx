@@ -8,7 +8,7 @@ import { TodoInput } from "../components/TodoInput";
 export function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
 
-  const newCounter = tasks.filter((item) => item.done === false).length;
+  // const newCounter = tasks.filter((item) => item.done === false).length;
 
   function handleAddTask(newTaskTitle: string) {
     const newTask = {
@@ -41,7 +41,7 @@ export function Home() {
 
   return (
     <View style={styles.container}>
-      <Header tasksCounter={newCounter} />
+      <Header tasksCounter={tasks.length} />
 
       <TodoInput addTask={handleAddTask} />
 
